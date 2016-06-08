@@ -27,6 +27,10 @@ seajs.config({
 });
 //ajaxURl
 var postDataUrlHead='http://fz.ttdingwei.com/';
+//公司RAP服务器，默认为淘宝的
+var srcHead='http://gz-hh.cc:8080/rap.plugin.js?projectId=';
 seajs.use('RAP_Mockjs',function(){
-	starMockData(4285);
+	// 项目代号
+	// 服务器前缀
+	starMockData(4,srcHead);
 });

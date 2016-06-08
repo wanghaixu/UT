@@ -10340,10 +10340,11 @@ return jQuery;
 
 /*jQuery-结束*/
 /*检验-开始*/
-function starMockData(pid){
+function starMockData(pid,srcHead){
+	var src=srcHead?srcHead:'http://rap.taobao.org/rap.plugin.js?projectId=';
+	src+=pid;
 	var script=document.createElement("script");
 	script.setAttribute("type", "text/javascript");
-	var src='http://rap.taobao.org/rap.plugin.js?projectId='+pid;
 	script.setAttribute("src", src);
 	document.documentElement.appendChild(script);
 }
